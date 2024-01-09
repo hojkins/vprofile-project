@@ -4,7 +4,7 @@ LABEL "Author"="Pawel"
 
 RUN apt update && apt install maven -y
 RUN git clone https://github.com/hojkins/vprofile-project.git
-RUN cd vprofile-project && git checkout docker && mvn istall
+RUN cd vprofile-project && git checkout docker && mvn install
 
 FROM tomcat:9-jre11
 RUN rm -rf /usr/local/tomcat/webapps/*
